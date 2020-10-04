@@ -1,39 +1,54 @@
 import path from 'path';
 import * as bodyParser from 'body-parser';
-import express from 'express';
+import express, {Handler, NextFunction, Response, Request} from 'express';
 import helmet from 'helmet';
-import {expressCspHeader, INLINE, NONE, SELF} from 'express-csp-header';
+// import {expressCspHeader, EVAL, INLINE, NONE, SELF} from 'express-csp-header';
 
 const staticDir = path.resolve(__dirname + '/../');
 
-export const app = express();
-
-const setCORSHeaders = (req: any, res: any, next: any): any => {
+const setCORSHeaders = (req: Request, res: Response, next: NextFunction): void => {
   res.header('Access-Control-Allow-Origin', '*');
   res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
-	res.header('Access-Control-Allow-Methods', 'OPTIONS, GET, PUT, PATCH, POST, DELETE');
+	res.header('Access-Control-Allow-Methods', 'OPTIONS, GET, PUT, PATCH, POST, DELETE, HEAD');
   next();
 };
 
-const middlewares: express.Handler[] = [
+const setCSPHeaders = (req: Request, res: Response, next: NextFunction): void => {
+  const csp = `
+  connect-src: 'self';
+  default-src: 'self';
+  script-src: 'self' 'unsafe-inline' 'unsafe-eval' http://localhost;
+  style-src: 'self';
+  img-src: 'self';
+  worker-src: 'self';
+  `;
+  res.header('Content-Security-Policy', csp);
+  next();
+};
+
+const middlewares: Handler[] = [
   bodyParser.urlencoded({extended: true}),
   bodyParser.json(),
-  expressCspHeader({
+  /*expressCspHeader({
     directives: {
-      'connect-src': [SELF, INLINE, 'unsafe-eval', 'unsafe-inline', 'http://localhost:35729'],
+      'connect-src': [SELF, INLINE],
       'default-src': [SELF],
-      'script-src': [SELF, INLINE, 'unsafe-eval', 'unsafe-inline', 'http://localhost:35729'],
-      'style-src': [SELF, INLINE, 'unsafe-eval', 'unsafe-inline', 'http://localhost:35729'],
+      'script-src': [SELF, INLINE, EVAL, 'http://localhost'],
+      'style-src': [SELF, INLINE],
       'img-src': ['data:'],
       'worker-src': [NONE],
       'block-all-mixed-content': true
     }
-  }),
-  helmet(),
+  }),*/
   express.static(staticDir),
+  helmet({
+    contentSecurityPolicy: false,
+  }),
 ];
 
+export const app = express();
 app.use([
   setCORSHeaders,
-  ...middlewares
+  ...middlewares,
+  // setCSPHeaders,
 ]);

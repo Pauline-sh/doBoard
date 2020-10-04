@@ -1,11 +1,10 @@
-import http from'http';
+import http from 'http';
 
 import {app} from './app';
 
-const httpPort = process.env.HTTP_PORT || 8881;
+const httpPort = process.env.HTTP_PORT || 8894;
 
 const httpServer = http.createServer(app);
-
 httpServer.listen(httpPort);
 
 /*import https from'https';
