@@ -5,12 +5,18 @@
     "module": "es2015",                       /* Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', or 'ESNext'. */
     "lib": ["es2017", "dom"],                    /* Specify library files to be included in the compilation. */
     "outDir": "../dist",                        /* Redirect output structure to the directory. */
+    "rootDirs": ["."],
+    "baseUrl": "./",
+    "paths": {
+      "src/*": [
+        "./src/*"
+      ],
+    }
   },
   "include": [
     "src/**/*"
   ],
   "exclude": [
-    "node_modules/",
     "rollup.config.js"
   ]
 }

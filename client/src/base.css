@@ -1,12 +1,14 @@
 body {
   margin: 0;
-  --color-dark: rgb(31, 35, 41);
-  --color-light: rgb(234, 235, 230);
-  --color-light-green: rgb(223, 245, 213);
-  --color-light-blue: powderblue;
-  --text-font: Verdana, Sans-Serif;
-}
-
-[hidden] {
-  display: none;
+  padding: 0;
+  --theme-red: rgb(219, 96, 96);
+  --theme-dark: rgb(55, 53, 53);
+  --theme-light: rgb(253, 252, 250);
+  --theme-green: rgb(0, 128, 0);
+  --theme-green-light: rgba(0, 128, 0, 0.2);
+  --theme-aqua: rgb(157, 220, 216);
+  --theme-aqua-light: rgba(157, 220, 216, 0.2);
+  --theme-yellow: rgb(255, 195, 124);
+  --theme-deepblue: rgb(53, 95, 114);
+  --font-style: Verdana, Sans-Serif;
 }

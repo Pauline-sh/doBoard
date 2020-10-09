@@ -5,14 +5,11 @@
     "moduleResolution": "node",
     "lib": ["es2017"],
     "outDir": "../dist/server",
-    "baseUrl": ".",
-    "paths": {
-        "*": [
-            "node_modules/*"
-        ]
-    }
   },
   "include": [
     "src/**/*"
+  ],
+  "exclude": [
+    "rollup.config.js"
   ]
 }
