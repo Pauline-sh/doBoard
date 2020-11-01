@@ -1,4 +1,5 @@
 node_modules
-dist/*.js
-dist/*.js.map
-dist/server/*
+dist/index.js
+dist/index.js.map
+dist/server/index.js
+dist/server/index.js.map

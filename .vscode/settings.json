@@ -1,0 +1,30 @@
+{
+  "editor.formatOnSave": false,
+  "[javascript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+      "editor.formatOnSave": true
+  },
+  "[javascriptreact]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+      "editor.formatOnSave": true
+  },
+  "[typescript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+      "editor.formatOnSave": true
+  },
+  "[typescriptreact]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+      "editor.formatOnSave": true
+  },
+  "eslint.options": {
+      "extensinons": [".ts", ".js", ".tsx", ".jsx"]
+  },
+  "eslint.validate": [
+      "javascript",
+      "javascriptreact",
+      "typescript",
+      "typescriptreact",
+  ],
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+}
