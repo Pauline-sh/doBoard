@@ -36,6 +36,8 @@
       "no-unexpected-multiline": "off",
       "no-unused-expressions": "warn",
       "no-unused-vars": "warn",
-      "prettier/prettier": 2 // Means error
+      "prettier/prettier": ["error", {
+        "endOfLine":"auto"
+      }]
     }
 }
