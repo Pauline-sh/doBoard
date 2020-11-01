@@ -1,6 +1,4 @@
 body {
-  margin: 0;
-  padding: 0;
   --theme-red: rgb(219, 96, 96);
   --theme-dark: rgb(55, 53, 53);
   --theme-light: rgb(253, 252, 250);
@@ -10,5 +8,14 @@ body {
   --theme-aqua-light: rgba(157, 220, 216, 0.2);
   --theme-yellow: rgb(255, 195, 124);
   --theme-deepblue: rgb(53, 95, 114);
-  --font-style: Verdana, Sans-Serif;
+  --font-style: verdana, sans-serif;
+
+  box-sizing: border-box;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  height: 100vh;
 }
