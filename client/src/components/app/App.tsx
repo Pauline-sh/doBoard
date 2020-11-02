@@ -3,9 +3,7 @@ import Navigation from 'src/components/navigation/Navigation';
 
 class App extends React.Component {
   render() {
-    return (
-      <Navigation />
-    );
+    return <Navigation />;
   }
 }
 
