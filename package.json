@@ -29,6 +29,7 @@
     "@rollup/plugin-run": "^2.0.2",
     "@rollup/plugin-typescript": "^6.0.0",
     "@rollup/plugin-url": "^5.0.1",
+    "@rollup/stream": "^1.1.0",
     "@svgr/rollup": "^5.4.0",
     "@types/cors": "^2.8.8",
     "@types/express": "^4.17.8",
@@ -42,6 +43,9 @@
     "eslint-config-prettier": "^6.15.0",
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.21.5",
+    "esm": "^3.2.25",
+    "gulp": "^4.0.2",
+    "gulp-watch": "^5.0.1",
     "husky": "^5.0.0-beta.0",
     "import-sort-style-module": "^6.0.0",
     "npm-run-all": "^4.1.5",
@@ -57,7 +61,8 @@
     "stylelint": "^13.7.2",
     "stylelint-config-standard": "^20.0.0",
     "stylelint-order": "^4.1.0",
-    "typescript": "^4.0.3"
+    "typescript": "^4.0.3",
+    "vinyl-source-stream": "^2.0.0"
   },
   "dependencies": {
     "core-js-pure": "^3.6.5",
