@@ -14,18 +14,18 @@ export default function Navigation(): JSX.Element {
 
   return (
     <Router>
-      <div className="navigation-wrapper">
-        <div className="decoration-line" />
-        <nav className="navigation">
+      <div className='navigation-wrapper'>
+        <div className='decoration-line' />
+        <nav className='navigation'>
           <ul>
-            <li id="add-item">
-              <button id="button-add" onClick={toggleModal}>
+            <li id='add-item'>
+              <button id='button-add' onClick={toggleModal}>
                 Добавить +
               </button>
             </li>
             <li>
-              <Link to="/menu">
-                <div id="sandwich-menu" />
+              <Link to='/menu'>
+                <div id='sandwich-menu' />
               </Link>
             </li>
           </ul>
@@ -35,8 +35,8 @@ export default function Navigation(): JSX.Element {
         <TodoModal />
       </Modal>
       <Switch>
-        <Route path="/" />
-        <Route path="/menu" />
+        <Route path='/' />
+        <Route path='/menu' />
       </Switch>
     </Router>
   );

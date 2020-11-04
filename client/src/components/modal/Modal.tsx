@@ -11,15 +11,15 @@ function Modal(props: ModalProps): React.ReactPortal | null {
 
   return ReactDOM.createPortal(
     <React.Fragment>
-      <div className="modal-overlay" />
+      <div className='modal-overlay' />
       <div
-        className="modal-wrapper"
+        className='modal-wrapper'
         aria-modal
         aria-hidden
         tabIndex={-1}
-        role="dialog"
+        role='dialog'
       >
-        <div className="modal">{props.children}</div>
+        <div className='modal'>{props.children}</div>
       </div>
     </React.Fragment>,
     document.body
