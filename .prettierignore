@@ -6,3 +6,4 @@ tsconfig.json
 dist/*
 *.html
 package.json
+.vscode

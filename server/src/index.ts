@@ -1,8 +1,8 @@
-import http from "http";
+import http from 'http';
 
-import {app} from "./app";
+import { app } from './app';
 
-const httpPort = process.env.HTTP_PORT || 8881;
+const httpPort = process.env.HTTP_PORT || 8001;
 
 const httpServer = http.createServer(app);
 httpServer.listen(httpPort);

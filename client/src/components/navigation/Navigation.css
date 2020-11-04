@@ -7,7 +7,7 @@
 
 .decoration-line {
   width: 100%;
-  height: 0.2em;
+  height: .2em;
   background-color: var(--theme-yellow);
 }
 
@@ -34,17 +34,21 @@
   padding: 0;
 }
 
+.navigation ul li button,
 .navigation ul li a {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0 1.5em;
   height: 100%;
+  background-color: transparent;
+  border: none;
   color: var(--theme-light);
   text-decoration: none;
   font-family: var(--font-style);
   font-size: 1.2em;
   font-weight: 500;
+  cursor: pointer;
 }
 
 .navigation ul #add-item {

@@ -33,11 +33,13 @@
       }
     },
     "rules": {
+      "jsx-quotes": ["error", "prefer-single"],
       "no-unexpected-multiline": "off",
       "no-unused-expressions": "warn",
       "no-unused-vars": "warn",
       "prettier/prettier": ["error", {
         "endOfLine":"auto"
-      }]
+      }],
+      "object-curly-spacing": ["error", "always"]
     }
 }

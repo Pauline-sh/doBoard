@@ -3,13 +3,11 @@ import './style.css';
 import React from 'react';
 
 class Page extends React.Component {
-  render() {
+  render(): JSX.Element {
     return (
       <div className='page'>
-				<div className='page-content'>
-					aaaaaaaaaaaa
-				</div>
-			</div>
+        <div className='page-content'></div>
+      </div>
     );
   }
 }
