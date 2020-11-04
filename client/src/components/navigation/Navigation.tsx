@@ -8,6 +8,10 @@ import TodoModal from 'src/components/todo_modal/TodoModal';
 export default function Navigation(): JSX.Element {
   const [isShowing, toggle] = useState(false);
 
+  function toggleModal() {
+    toggle(!isShowing);
+  }
+
   return (
     <Router>
       <div className="navigation-wrapper">
@@ -15,7 +19,7 @@ export default function Navigation(): JSX.Element {
         <nav className="navigation">
           <ul>
             <li id="add-item">
-              <button id="button-add" onClick={() => toggle(!isShowing)}>
+              <button id="button-add" onClick={toggleModal}>
                 Добавить +
               </button>
             </li>
@@ -27,7 +31,7 @@ export default function Navigation(): JSX.Element {
           </ul>
         </nav>
       </div>
-      <Modal isShowing={isShowing} hide={() => toggle(!isShowing)}>
+      <Modal isShowing={isShowing} hide={toggleModal}>
         <TodoModal />
       </Modal>
       <Switch>
