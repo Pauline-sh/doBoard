@@ -1,11 +1,11 @@
+import './Modal.css';
+
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ModalProps from 'src/utils/ModalProps';
+import ModalProps from 'src/components/modal/ModalProps';
 
-import './style.css';
-
-function Modal({ isShowing, hide, content }: ModalProps): any {
-  if (!isShowing) {
+function Modal(props: ModalProps): React.ReactPortal | null {
+  if (!props.isShowing) {
     return null;
   }
 
@@ -19,13 +19,11 @@ function Modal({ isShowing, hide, content }: ModalProps): any {
         tabIndex={-1}
         role="dialog"
       >
-        <div className="modal">
-          {content}
-        </div>
+        <div className="modal">{props.children}</div>
       </div>
     </React.Fragment>,
     document.body
-  )
+  );
 }
 
 export default Modal;

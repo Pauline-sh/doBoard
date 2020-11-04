@@ -1,16 +1,12 @@
-import './style.css';
+import './Navigation.css';
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, Route, BrowserRouter as Router, Switch } from 'react-router-dom';
-import Page from 'src/components/page/Page';
 import Modal from 'src/components/modal/Modal';
 import TodoModal from 'src/components/todo_modal/TodoModal';
-import useModal from 'src/hooks/useModal';
 
 export default function Navigation(): JSX.Element {
-  const { isShowing, toggle } = useModal();
-
-  const todoModal = TodoModal;
+  const [isShowing, toggle] = useState(false);
 
   return (
     <Router>
@@ -19,7 +15,7 @@ export default function Navigation(): JSX.Element {
         <nav className="navigation">
           <ul>
             <li id="add-item">
-              <button id="button-add" onClick={toggle}>
+              <button id="button-add" onClick={() => toggle(!isShowing)}>
                 Добавить +
               </button>
             </li>
@@ -31,31 +27,13 @@ export default function Navigation(): JSX.Element {
           </ul>
         </nav>
       </div>
-      <Modal isShowing={isShowing} hide={toggle} content={<TodoModal hide={toggle} />} />
+      <Modal isShowing={isShowing} hide={() => toggle(!isShowing)}>
+        <TodoModal />
+      </Modal>
       <Switch>
-        <Route path="/">
-          <Home />
-        </Route>
-        <Route path="/menu">
-          <Menu />
-        </Route>
+        <Route path="/" />
+        <Route path="/menu" />
       </Switch>
     </Router>
-  );
-}
-
-function Home() {
-  return (
-    <Page>
-      <h2>{'Home'}</h2>
-    </Page>
-  );
-}
-
-function Menu() {
-  return (
-    <Page>
-      <h2>{'Menu'}</h2>
-    </Page>
   );
 }

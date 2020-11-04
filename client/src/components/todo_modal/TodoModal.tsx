@@ -1,15 +1,13 @@
-import React, { Props } from 'react';
-import ReactDOM from 'react-dom';
-import ModalProps from 'src/utils/ModalProps';
+import './TodoModal.css';
 
-import './style.css';
+import React from 'react';
 
-export default function TodoModal(props: any) {
+export default function TodoModal(): JSX.Element {
   // call props.hide() to close modal
 
   return (
     <React.Fragment>
       <p>Add task modal placeholder</p>
     </React.Fragment>
-  )
+  );
 }
