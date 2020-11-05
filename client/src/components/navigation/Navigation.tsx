@@ -1,6 +1,6 @@
 import './Navigation.css';
 
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import { Link, Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 import Modal from 'src/components/modal/Modal';
 import TodoModal from 'src/components/todo_modal/TodoModal';
@@ -8,9 +8,16 @@ import TodoModal from 'src/components/todo_modal/TodoModal';
 export default function Navigation(): JSX.Element {
   const [isShowing, toggle] = useState(false);
 
-  function toggleModal() {
+  const toggleModal = useCallback(
+    () => {
+      toggle(!isShowing);
+    },
+    [isShowing]
+  )
+
+  /*function toggleModal() {
     toggle(!isShowing);
-  }
+  }*/
 
   return (
     <Router>
