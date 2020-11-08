@@ -8,9 +8,9 @@ import TodoModal from 'src/components/todo_modal/TodoModal';
 export default function Navigation(): JSX.Element {
   const [isShowing, toggle] = useState(false);
 
-  function toggleModal() {
+  const toggleModal = () => {
     toggle(!isShowing);
-  }
+  };
 
   return (
     <Router>
