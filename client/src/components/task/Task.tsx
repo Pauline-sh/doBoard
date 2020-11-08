@@ -11,8 +11,8 @@ function DayRecord(props: TaskProps): JSX.Element {
   return (
     <div className={b('wrapper')}>
       <div className={b()}>
-        {props.data.time ? <div>{formatTime(props.data.time)}</div> : null}
         <div>{props.data.title}</div>
+        {props.data.time ? <div>{formatTime(props.data.time)}</div> : null}
       </div>
     </div>
   );
