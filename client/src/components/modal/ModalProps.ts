@@ -2,7 +2,7 @@ import React from 'react';
 
 interface ModalPropsInternal {
   isShowing: boolean;
-  hide: () => void;
+  handleClick: () => void;
 }
 
 type ModalProps = React.PropsWithChildren<ModalPropsInternal>;

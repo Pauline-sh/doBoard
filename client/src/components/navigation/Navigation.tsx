@@ -1,43 +1,59 @@
 import './Navigation.css';
 
+import { block } from 'bem-cn';
 import React, { useState } from 'react';
-import { Link, Route, BrowserRouter as Router, Switch } from 'react-router-dom';
+import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
+import Calendar from 'src/components/calendar/Calendar';
 import Modal from 'src/components/modal/Modal';
 import TodoModal from 'src/components/todo_modal/TodoModal';
 
-export default function Navigation(): JSX.Element {
-  const [isShowing, toggle] = useState(false);
+const b = block('navigation');
 
-  const toggleModal = () => {
-    toggle(!isShowing);
+function Navigation(): JSX.Element {
+  const [isModalShowing, toggleModal] = useState(false);
+  const [isMenuShowing, toggleMenu] = useState(false);
+
+  const handleButtonAddClick = () => {
+    toggleModal(!isModalShowing);
+  };
+
+  const handleModalClick = () => {
+    toggleModal(!isModalShowing);
+  };
+
+  const handleButtonMenuClick = () => {
+    toggleMenu(!isMenuShowing);
   };
 
   return (
     <Router>
-      <div className='navigation-wrapper'>
-        <div className='decoration-line' />
-        <nav className='navigation'>
+      <div className={b('wrapper')}>
+        <div className={b('decoration-line')} />
+        <nav className={b()}>
           <ul>
-            <li id='add-item'>
-              <button id='button-add' onClick={toggleModal}>
+            <li className={b('item_justify-start')}>
+              <button id='button-add' onClick={handleButtonAddClick}>
                 Добавить +
               </button>
             </li>
             <li>
-              <Link to='/menu'>
+              <button id='button-menu' onClick={handleButtonMenuClick}>
                 <div id='sandwich-menu' />
-              </Link>
+              </button>
             </li>
           </ul>
         </nav>
       </div>
-      <Modal isShowing={isShowing} hide={toggleModal}>
+      <Modal isShowing={isModalShowing} handleClick={handleModalClick}>
         <TodoModal />
       </Modal>
       <Switch>
-        <Route path='/' />
-        <Route path='/menu' />
+        <Route path='/'>
+          <Calendar />
+        </Route>
       </Switch>
     </Router>
   );
 }
+
+export default Navigation;

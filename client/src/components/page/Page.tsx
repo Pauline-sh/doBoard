@@ -1,15 +1,18 @@
-import './style.css';
+import './Page.css';
 
+import { block } from 'bem-cn';
 import React from 'react';
 
-class Page extends React.Component {
-  render(): JSX.Element {
-    return (
-      <div className='page'>
-        <div className='page-content'></div>
-      </div>
-    );
-  }
+const b = block('page');
+
+type PropsWithChildren = React.PropsWithChildren<Record<string, unknown>>;
+
+function Page(props: PropsWithChildren): JSX.Element {
+  return (
+    <div className={b()}>
+      <div className={b('content')}>{props.children}</div>
+    </div>
+  );
 }
 
 export default Page;

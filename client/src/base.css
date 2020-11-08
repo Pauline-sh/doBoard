@@ -2,13 +2,17 @@ body {
   --theme-red: rgb(219, 96, 96);
   --theme-dark: rgb(55, 53, 53);
   --theme-light: rgb(253, 252, 250);
-  --theme-green: rgb(0, 128, 0);
-  --theme-green-light: rgba(0, 128, 0, 0.2);
+  --theme-green: rgb(62, 161, 126);
+  --theme-green-dim: rgba(62, 161, 126, .5);
+  --theme-green-light: rgba(62, 161, 126, .2);
   --theme-aqua: rgb(157, 220, 216);
-  --theme-aqua-light: rgba(157, 220, 216, 0.2);
+  --theme-aqua-dim: rgba(157, 220, 216, .5);
+  --theme-aqua-light: rgba(157, 220, 216, .2);
   --theme-yellow: rgb(255, 195, 124);
   --theme-deepblue: rgb(53, 95, 114);
-  --font-style: verdana, sans-serif;
+  --font-family: 'Roboto', sans-serif;
+  --border-radius: 8px;
+  --border-radius-small: 4px;
 
   box-sizing: border-box;
   min-height: 100vh;

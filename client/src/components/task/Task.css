@@ -1,0 +1,17 @@
+.task__wrapper {
+  cursor: grab;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: var(--theme-light);
+  border-radius: var(--border-radius-small);
+  height: 30px;
+}
+
+.task {
+  display: flex;
+  margin: 0 10px;
+  font-size: .9rem;
+  font-weight: 500;
+  gap: 10px;
+}
