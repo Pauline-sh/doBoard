@@ -2,16 +2,13 @@ const path = require('path');
 
 module.exports = {
   entry: './client/src/index.tsx',
+  mode: 'development',
   devtool: 'source-map',
-  devServer: {
-    contentBase: '../dist',
-  },
   module: {
     rules: [
       {
         test: /\.(ts|tsx)$/,
         use: 'ts-loader',
-        exclude: /node_modules/,
       },
       {
         test: /\.css$/,
@@ -34,5 +31,9 @@ module.exports = {
   output: {
     filename: 'index.js',
     path: path.resolve(__dirname, '../dist'),
+  },
+  watch: true,
+  watchOptions: {
+    ignored: /node_modules/,
   },
 };
