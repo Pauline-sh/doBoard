@@ -4,14 +4,16 @@
   "description": "Homemade todo app.",
   "private": true,
   "scripts": {
-    "webpack:cli": "webpack --config client/webpack.config.js",
-    "client:build": "rollup -c client/rollup.config.js",
-    "client:watch": "rollup -c client/rollup.config.js -w",
-    "client:test": "echo \"Error: no test specified\" && exit 1",
-    "server:build": "rollup -c server/rollup.config.js",
-    "server:watch": "rollup -c server/rollup.config.js -w",
-    "server:dev": "npm-run-all --parallel server:start server:watch",
+    "client:dev": "webpack --config client/webpack.config.js",
+    "server:dev": "npm-run-all -s server:build server:start",
+    "server:build": "webpack --config server/webpack.config.js",
     "server:start": "node dist/server/index.js",
+    "dev": "npm-run-all -p client:dev server:dev",
+    "rollup-client:build": "rollup -c client/rollup.config.js",
+    "rollup-client:watch": "rollup -c client/rollup.config.js -w",
+    "rollup-server:build": "rollup -c server/rollup.config.js",
+    "rollup-server:watch": "rollup -c server/rollup.config.js -w",
+    "client:test": "echo \"Error: no test specified\" && exit 1",
     "server:test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "paulin-sh",
@@ -65,7 +67,7 @@
     "typescript": "^4.0.3",
     "webpack": "^5.4.0",
     "webpack-cli": "^4.2.0",
-    "webpack-dev-server": "^3.11.0"
+    "webpack-node-externals": "^2.5.2"
   },
   "dependencies": {
     "core-js-pure": "^3.6.5",
