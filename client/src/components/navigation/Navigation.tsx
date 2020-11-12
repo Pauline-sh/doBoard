@@ -13,11 +13,7 @@ function Navigation(): JSX.Element {
   const [isModalShowing, toggleModal] = useState(false);
   const [isMenuShowing, toggleMenu] = useState(false);
 
-  const handleButtonAddClick = () => {
-    toggleModal(!isModalShowing);
-  };
-
-  const handleModalClick = () => {
+  const handleModalToggle = () => {
     toggleModal(!isModalShowing);
   };
 
@@ -32,7 +28,7 @@ function Navigation(): JSX.Element {
         <nav className={b()}>
           <ul>
             <li className={b('item_justify-start')}>
-              <button id='button-add' onClick={handleButtonAddClick}>
+              <button id='button-add' onClick={handleModalToggle}>
                 Добавить +
               </button>
             </li>
@@ -44,7 +40,7 @@ function Navigation(): JSX.Element {
           </ul>
         </nav>
       </div>
-      <Modal isShowing={isModalShowing} handleClick={handleModalClick}>
+      <Modal isShowing={isModalShowing} handleClick={handleModalToggle}>
         <TodoModal />
       </Modal>
       <Switch>

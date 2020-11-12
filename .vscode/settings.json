@@ -1,5 +1,6 @@
 {
   "editor.formatOnSave": false,
+	"editor.insertSpaces": true,
   "[javascript]": {
       "editor.defaultFormatter": "esbenp.prettier-vscode",
       "editor.formatOnSave": true

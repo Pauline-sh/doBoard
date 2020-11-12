@@ -5,15 +5,38 @@
   align-items: center;
   background-color: var(--theme-light);
   border-radius: var(--border-radius-small);
-  height: 30px;
+  height: 36px;
 }
 
 .task {
   width: 100%;
   display: grid;
-  grid-template-columns: auto min-content;
+  align-items: center;
+  grid-template-columns: min-content auto min-content;
   margin: 0 10px;
   font-size: .9rem;
   font-weight: 500;
   gap: 10px;
+}
+
+.task__status-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  border-radius: var(--border-radius-small);
+  background-color: var(--theme-aqua-light);
+}
+
+.task__status-container_focus {
+  background-color: var(--theme-green-light);
+}
+
+.task__status {
+  width: 15px;
+  height: 15px;
+  background: no-repeat center url(../../resources/icons/correct.svg);
+  background-size: contain;
 }
