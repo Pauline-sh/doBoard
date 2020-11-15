@@ -24,8 +24,8 @@ module.exports = {
     path: path.resolve(__dirname, '../dist/server'),
     publicPath: '/',
   },
-  /*watch: true,
+  watch: true,
   watchOptions: {
     ignored: /node_modules/,
-  },*/
+  },
 };

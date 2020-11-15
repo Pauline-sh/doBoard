@@ -5,9 +5,9 @@
   "private": true,
   "scripts": {
     "client:dev": "webpack --config client/webpack.config.js",
-    "server:dev": "npm-run-all -s server:build server:start",
-    "server:build": "webpack --config server/webpack.config.js",
-    "server:start": "node dist/server/index.js",
+    "server:dev": "npm-run-all -p server:watch server:start",
+    "server:watch": "webpack --config server/webpack.config.js",
+    "server:start": "nodemon dist/server/index.js",
     "dev": "npm-run-all -p client:dev server:dev",
     "rollup-client:build": "rollup -c client/rollup.config.js",
     "rollup-client:watch": "rollup -c client/rollup.config.js -w",
