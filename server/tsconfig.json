@@ -9,7 +9,5 @@
   "include": [
     "src/**/*"
   ],
-  "exclude": [
-    "rollup.config.js"
-  ]
+  "exclude": []
 }

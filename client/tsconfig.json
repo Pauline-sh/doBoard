@@ -17,7 +17,5 @@
     "src/*",
     "src/**/*"
   ],
-  "exclude": [
-    "rollup.config.js"
-  ]
+  "exclude": []
 }

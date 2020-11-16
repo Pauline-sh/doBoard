@@ -1,6 +1,5 @@
 node_modules
 dist
 tsconfig.json
-*/rollup.config.js
 */tsconfig.json
 .vscode

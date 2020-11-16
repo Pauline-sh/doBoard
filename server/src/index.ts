@@ -2,7 +2,7 @@ import http from 'http';
 
 import { app } from './app';
 
-const httpPort = process.env.HTTP_PORT || 8001;
+const httpPort = process.env.HTTP_PORT || 8000;
 
 const httpServer = http.createServer(app);
 httpServer.listen(httpPort);

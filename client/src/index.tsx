@@ -1,4 +1,4 @@
-import 'core-js/stable';
+import 'core-js-pure';
 import 'regenerator-runtime/runtime';
 
 import './base.css';
