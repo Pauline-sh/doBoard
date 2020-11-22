@@ -6,6 +6,7 @@ import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 import Calendar from 'src/components/calendar/Calendar';
 import Modal from 'src/components/modal/Modal';
 import TodoModal from 'src/components/todo_modal/TodoModal';
+import MenuSvg from 'src/resources/icons/menu.svg';
 
 const b = block('navigation');
 
@@ -34,7 +35,7 @@ function Navigation(): JSX.Element {
             </li>
             <li>
               <button id='button-menu' onClick={handleButtonMenuClick}>
-                <div id='sandwich-menu' />
+                <img src={MenuSvg} />
               </button>
             </li>
           </ul>

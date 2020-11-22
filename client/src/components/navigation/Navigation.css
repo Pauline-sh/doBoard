@@ -54,11 +54,3 @@
 .navigation ul .navigation__item_justify-start {
   justify-self: start;
 }
-
-.navigation ul li #sandwich-menu {
-  width: 30px;
-  height: 30px;
-  mask: url(../../resources/icons/menu.svg);
-  mask-size: cover;
-  background-color: var(--theme-light);
-}

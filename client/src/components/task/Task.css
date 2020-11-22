@@ -33,10 +33,3 @@
 .task__status-container_focus {
   background-color: var(--theme-green-light);
 }
-
-.task__status {
-  width: 15px;
-  height: 15px;
-  background: no-repeat center url(../../resources/icons/correct.svg);
-  background-size: contain;
-}

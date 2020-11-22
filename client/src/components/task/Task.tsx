@@ -3,7 +3,7 @@ import './Task.css';
 import { block } from 'bem-cn';
 import React from 'react';
 import TaskProps from 'src/components/task/TaskProps';
-import picUrl, { ReactComponent as Pic } from 'src/resources/icons/correct.svg';
+import CheckedSvg from 'src/resources/icons/checked.svg';
 import { formatTime } from 'src/utils/dateFormatting';
 
 const b = block('task');
@@ -12,8 +12,11 @@ function DayRecord(props: TaskProps): JSX.Element {
   const renderStatus = (): JSX.Element => {
     return (
       <div className={b('status-container', { focus: props.focus })}>
+        <div className={b('status', { done: props.data.status })} />
         <img
-          src={picUrl}
+          src={CheckedSvg}
+          width='15'
+          height='15'
           className={b('status', { done: props.data.status })}
         />
       </div>
