@@ -4,6 +4,11 @@
   font-family: var(--font-family);
   background-color: var(--theme-aqua-light);
   color: var(--theme-dark);
+  margin-bottom: 10px;
+}
+
+.day-record:last-child {
+  margin-bottom: 0;
 }
 
 .day-record_focus {
@@ -41,5 +46,4 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 5px;
 }

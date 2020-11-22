@@ -6,6 +6,11 @@
   background-color: var(--theme-light);
   border-radius: var(--border-radius-small);
   height: 36px;
+  margin-bottom: 5px;
+}
+
+.task__wrapper:last-child {
+  margin-bottom: 0;
 }
 
 .task {
