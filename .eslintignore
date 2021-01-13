@@ -3,3 +3,4 @@ dist
 tsconfig.json
 */tsconfig.json
 .vscode
+webpack.config.js

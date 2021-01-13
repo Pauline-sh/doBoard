@@ -4,6 +4,6 @@
   background-color: var(--theme-light);
 }
 
-.page-content {
-  padding: .5em;
+.page__content {
+  padding: .5rem;
 }

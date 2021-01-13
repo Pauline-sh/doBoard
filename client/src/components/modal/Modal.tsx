@@ -1,8 +1,11 @@
 import './Modal.css';
 
+import { block } from 'bem-cn';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import ModalProps from 'src/components/modal/ModalProps';
+
+const b = block('modal');
 
 function Modal(props: ModalProps): React.ReactPortal | null {
   if (!props.isShowing) {
@@ -11,15 +14,15 @@ function Modal(props: ModalProps): React.ReactPortal | null {
 
   return ReactDOM.createPortal(
     <React.Fragment>
-      <div className='modal-overlay' />
+      <div className={b('overlay')} />
       <div
-        className='modal-wrapper'
+        className={b('wrapper')}
         aria-modal
         aria-hidden
         tabIndex={-1}
         role='dialog'
       >
-        <div className='modal'>{props.children}</div>
+        <div className={b()}>{props.children}</div>
       </div>
     </React.Fragment>,
     document.body

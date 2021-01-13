@@ -1,4 +1,4 @@
-.modal-overlay {
+.modal__overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -9,7 +9,7 @@
   opacity: .5;
 }
 
-.modal-wrapper {
+.modal__wrapper {
   position: fixed;
   top: 0;
   left: 0;
@@ -30,7 +30,7 @@
   padding: 2rem;
 }
 
-.modal-close-button {
+.modal__close-button {
   font-size: 1.4rem;
   font-weight: 700;
   line-height: 1;

@@ -1,0 +1,49 @@
+.day-record {
+  min-height: 25px;
+  border-radius: var(--border-radius);
+  font-family: var(--font-family);
+  background-color: var(--theme-aqua-light);
+  color: var(--theme-dark);
+  margin-bottom: 10px;
+}
+
+.day-record:last-child {
+  margin-bottom: 0;
+}
+
+.day-record_focus {
+  background-color: var(--theme-green-light);
+}
+
+.day-record__date-section {
+  font-size: .75rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 25px;
+  padding: 0 10px;
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+  background-color: var(--theme-aqua);
+}
+
+.day-record__date-section_focus {
+  background-color: var(--theme-green);
+  color: var(--theme-light);
+}
+
+.day-record__date-section_inactive {
+  background-color: var(--theme-aqua-dim);
+  border-radius: var(--border-radius);
+}
+
+.day-record__date-section_inactive.day-record__date-section_focus {
+  background-color: var(--theme-green-dim);
+}
+
+.day-record__tasks-section {
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
